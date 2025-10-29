@@ -30,9 +30,14 @@ export class VorldArenaService {
     try {
       console.log('🎮 Initializing game with Vorld Arena Arcade...');
       
+      // Initialize game session - official endpoint from docs
+      const initUrl = `${this.config.gameApiUrl}/games/init`;
+      
       const response = await axios.post(
-        `${this.config.gameApiUrl}/${this.config.streamUrl}`,
-        {},
+        initUrl,
+        {
+          streamUrl: this.config.streamUrl
+        },
         {
           headers: {
             'Authorization': `Bearer ${this.config.userToken}`,
@@ -176,7 +181,7 @@ export class VorldArenaService {
   async getGameDetails() {
     try {
       const response = await axios.get(
-        `${this.config.gameApiUrl}/game/${this.gameState.gameId}`,
+        `${this.config.gameApiUrl}/games/${this.gameState.gameId}`,
         {
           headers: {
             'Authorization': `Bearer ${this.config.userToken}`,

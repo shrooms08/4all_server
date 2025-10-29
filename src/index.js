@@ -30,8 +30,8 @@ class VorldGodotBridge {
       arenaGameId: process.env.ARENA_GAME_ID,
       userToken: process.env.USER_TOKEN,
       streamUrl: process.env.STREAM_URL,
-      arenaServerUrl: process.env.ARENA_SERVER_URL || 'wss://airdrop-arcade.onrender.com/ws',
-      gameApiUrl: process.env.GAME_API_URL || 'https://airdrop-arcade.onrender.com',
+      arenaServerUrl: process.env.ARENA_SERVER_URL || 'wss://https://airdrop-arcade.onrender.com',
+      gameApiUrl: process.env.GAME_API_URL || 'https://airdrop-arcade.onrender.com/api',
       godotPort: parseInt(process.env.GODOT_WEBSOCKET_PORT || '9080')
     };
   }

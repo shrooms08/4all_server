@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "node --watch src/index.js"
+    "dev": "node --watch src/index.js",
+    "request-otp": "node scripts/request_otp.js",
+    "verify-email": "node scripts/verify_email.js",
+    "get-token": "node scripts/get_token.js"
   },
   "dependencies": {
     "axios": "^1.6.0",
