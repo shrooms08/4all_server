@@ -1,43 +1,11 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/api/auth",
-      "destination": "/api/auth.js"
-    },
-    {
-      "source": "/api/games",
-      "destination": "/api/games.js"
-    },
-    {
-      "source": "/api/boost",
-      "destination": "/api/boost.js"
-    },
-    {
-      "source": "/api/events",
-      "destination": "/api/events.js"
-    },
-    {
-      "source": "/api/items",
-      "destination": "/api/items.js"
-    },
-    {
-      "source": "/api/config",
-      "destination": "/api/config.js"
-    },
-    {
-      "source": "/api/profile",
-      "destination": "/api/profile.js"
-    },
-    {
-      "source": "/api/status",
-      "destination": "/api/status.js"
-    }
-  ],
   "functions": {
-    "api/*.js": {
+    "api/**/*.js": {
+      "runtime": "nodejs20.x",
       "memory": 1024,
-      "maxDuration": 10
+      "maxDuration": 10,
+      "includeFiles": "src/**"
     }
   }
 }
